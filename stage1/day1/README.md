@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/996af7f3-c5d9-4b2c-b8eb-387410ff1c15)# Task :
+# Task :
 1. Menurutmu apa itu DevOps (coba jelaskan dengan bahasa kamu sendiri)
 2. Buatlah 1 Virtual Machine (bebas ingin menggunakan Multipass, VMware, Virtualbox, etc)
 3. Install Nginx WebServer ke dalam Virtual Machine yang telah kalian buat.
@@ -18,9 +18,9 @@ DevOps bertugas untuk membuat seluruh proses tersebut menjadi otomatis agar memp
    
    ![Text Alternatif](1.png)
 
-2. kemudian multipass akan muncul di menu aplikasi
+2. kemudian multipass akan muncul di menu aplikasi, ketikkan saja
    ```
-   sudo snap install multipass
+   multipass
    ```
    
    ![Text Alternatif](2.png)
@@ -38,22 +38,31 @@ DevOps bertugas untuk membuat seluruh proses tersebut menjadi otomatis agar memp
 
 ## Install NGINX di linux
 1. update terlebih dahulu ubuntu kita
-
-  ![Text Alternatif](5.png)
+   ```
+   sudo apt update
+   ```
+   
+   ![Text Alternatif](5.png)
 
 2. kemudian ketikkan command ini untuk menginstall nginx
+   ```
+   sudo apt install nginx
+   ```
+   
+   ![Text Alternatif](6.png)
 
-  ![Text Alternatif](6.png)
-
-3. setelah selesai menginstall maka kita cek apakah nginx sudah berjalan atau tidak 
-
-  ![Text Alternatif](7.png)
+3. setelah selesai menginstall maka kita cek apakah nginx sudah berjalan atau tidak, dengan menggunakan command berikut 
+   ```
+   service nginx status
+   ```
+   
+   ![Text Alternatif](7.png)
 
 4. dapat dilihat bahwa nginx itu sudah loading dan active
  
-  ![Text Alternatif](8.png)
+   ![Text Alternatif](8.png)
 
 5. kemudian ketik ip address kita untuk melihat apakah nginx sudah bisa di browser
 
-  ![Text Alternatif](9.png)
+   ![Text Alternatif](9.png)
 
