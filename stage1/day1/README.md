@@ -64,5 +64,4 @@ DevOps bertugas untuk membuat seluruh proses tersebut menjadi otomatis agar memp
 
 5. kemudian ketik ip address kita untuk melihat apakah nginx sudah bisa di browser
 
-   ![Text Alternatif](9.png)
 
