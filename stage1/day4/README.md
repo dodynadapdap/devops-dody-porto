@@ -162,18 +162,21 @@ git commit -m "fix: Typo on Description"`.  Teguh kebetulan juga membuat perubah
 
 jawab:
       1) Teguh perlu mengambil perubahan terbaru dari remote repository
+        
          ```
-        git fetch origin
-        ```
+         git fetch origin
+         ```
 
       2) Selanjutnya, Teguh perlu menggabungkan perubahan dari remote branch ke branch lokalnya: 
+        
          ```
-        git pull origin main
-        ```
+         git pull origin main
+         ```
 
       3) Pada tahap ini, Git akan mencoba menggabungkan perubahan secara otomatis. Namun, karena ada konflik di file index.html, Git akan menandai konflik tersebut dalam file.
 
       4) Teguh perlu membuka file index.html dan mencari bagian yang ditandai dengan konflik. Biasanya terlihat seperti ini:
+         
          ```
          <<<<<<< HEAD
          // Perubahan Teguh
@@ -185,16 +188,19 @@ jawab:
       5) Teguh harus mengedit file ini secara manual, memutuskan bagian mana yang harus dipertahankan atau bagaimana menggabungkan kedua perubahan dengan benar.
 
       6) Setelah menyelesaikan konflik, Teguh perlu menandai file sebagai resolved: 
+         
          ```
          “git add index.html”
          ```
          
       7) Kemudian, Teguh melakukan commit untuk menyelesaikan proses merge: 
+         
          ```
          git commit -m "Merge remote-tracking branch 'origin/main' and resolve conflicts"
          ```
          
       8) Terakhir, Teguh dapat melakukan push ke remote repository: 
+         
          ```
          “git push origin main”
          ```
