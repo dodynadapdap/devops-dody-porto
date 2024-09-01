@@ -10,7 +10,7 @@
     - Jelaskan perbedaan protocol Jaringan TCP serta UDP.
   
 ##  Dokumentasi tentang ShortCut dari Text Editor Nano
-1.Ctrl + A: Pindah ke awal baris
+1. Ctrl + A: Pindah ke awal baris
 2. Ctrl + E: Pindah ke akhir baris
 3. Ctrl + Y: Pindah satu halaman ke atas
 4. Ctrl + V: Pindah satu halaman ke bawah
@@ -32,10 +32,53 @@
 20. Alt + shift + X: Mengaktifkan/menonaktifkan mode mouse
 
 
- ## Dokumentasi tentang Manipulation Text
+## Dokumentasi tentang Manipulation Text
  1. sort
     di gunakan untuk mengurutkan isi suatu file
+    ![Text Alternatif](foto/sort.png)
+    
 2. join
+   Seperti namanya join berarti gabung. Dengan join kita dapat membandingkan isi dua file. contoh:
+   file join1
+   
+   ![Text Alternatif](foto/join.png)
+
+   file join2
+   
+   ![Text Alternatif](foto/join1.png)
+
+   file join3
+   
+   ![Text Alternatif](foto/join2.png)
+
+   untuk membandingkan dari ketika file ini dapat dilihat  pada gambar berikut:
+   
+   ![Text Alternatif](foto/join3.png)
+
+3. Cut
+   Cut di gunakan untuk print beberapa bagian dari isi sebuah file.
+   Contoh:
+
+   ![Text Alternatif](foto/cat.png)
+
+   menampilkan atau memotong 1-5 agar tidak ditampilkan atau di potong
+
+   ![Text Alternatif](foto/cat1.png)
+
+4. sed
+   sed adalah editor aliran yang memungkinkan manipulasi teks non-interaktif. Editor ini memungkinkan Anda untuk mengubah, mengganti, atau menghapus pola teks dalam file.
+
+   contohnya adalah seperti berikut yang tampilannya begini
+   
+   ![Text Alternatif](foto/sed.png)
+
+   menjadi seperti ini
+
+   ![Text Alternatif](foto/sed1.png)
+
+   **s** berarti kita ingin mengganti sebuah kata,
+   **dody** kata yang ingin kita gantikan dan **baris**sadalah kata yang ingin kita gantikan **dody**.
+   Huruf **g** dalam perintah tersebut mengindikasikan bahwa kita ingin perintah tersebut dieksekusi secara global, menggantikan setiap contoh kecocokan
 
 ## perbedaan Shell Script dan Bash Script
 1) Shell sendiri adalah program yang menyediakan command line interface untuk berinteraksi dengan sistem operasi. 
@@ -49,40 +92,7 @@
    ```
 
 2. kemudian isi script berikut
-   ```
-  #!/bin/bash
-  
-  echo "Pilih webserver yang ingin diinstal:"
-  echo "1. Nginx"
-  echo "2. Apache2"
-  
-  read -p "Masukkan pilihan Anda (1 atau 2): " choice
-  
-  case $choice in
-      1)
-          echo "Menginstal Nginx..."
-          sudo apt update
-          sudo apt install nginx -y
-          sudo systemctl start nginx
-          sudo systemctl enable nginx
-          echo "Nginx telah berhasil diinstal dan dijalankan."
-          ;;
-      2)
-          echo "Menginstal Apache2..."
-          sudo apt update
-          sudo apt install apache2 -y
-          sudo systemctl start apache2
-          sudo systemctl enable apache2
-          echo "Apache2 telah berhasil diinstal dan dijalankan."
-          ;;
-      *)
-          echo "Pilihan tidak valid. Silakan jalankan script kembali dan pilih 1 atau 2."
-          exit 1
-          ;;
-  esac
-  
-  echo "Instalasi selesai."
-  ```
+   ![Text Alternatif](foto/bash.png)
 
 3. Berikan izin eksekusi dengan perintah
 
@@ -90,6 +100,16 @@
   sudo chmod +x instalWebServer
   ```
 
+
+4. kemudian jalankan command berikut untuk melakukan eksekusi
+  ```
+  sudo ./instalWebserver
+  ```
+
+  ![Text Alternatif](foto/bash1.png)
+
+  ![Text Alternatif](foto/bash2.png)
+    
 
 ##  Implementasikan Firewall pada linux server
 1. buat 2 vm
@@ -142,5 +162,8 @@
 
 4. Verifikasi konfigurasi:
     curl http:
+
+    
+    ![Text Alternatif](foto/implementasi.png)
 
     
