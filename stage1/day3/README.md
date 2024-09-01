@@ -35,6 +35,7 @@
 ## Dokumentasi tentang Manipulation Text
  1. sort
     di gunakan untuk mengurutkan isi suatu file
+
     ![Text Alternatif](foto/sort.png)
     
 2. join
