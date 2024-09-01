@@ -96,4 +96,51 @@
     ```
     multipass launch server-a & server-b
     ```
-2. pada ser
+2. pada server-b
+    mengkonfigurasi UFW di server-b untuk hanya mengizinkan akses dari server-a
+    ```
+    sudo ufw enable
+    ```
+
+    ```
+    sudo ufw default deny incoming
+    ```
+    
+    ```
+    sudo ufw default allow outgoing
+    ```
+
+    Untuk mengizinkan akses hanya dari server-a, kita perlu tahu IP address server-a dan catat ip server-a:
+    ```
+    sudo ufw allow from 10.247.191.8 to any port 80 proto tcp
+    ```
+    
+    ```
+    sudo ufw status
+    ```
+3. Mengizinkan atau memblokir protokol spesifik (TCP/UDP) dengan UFW:
+    - Mengizinkan TCP pada port tertentu:
+      ```
+      sudo ufw allow 80/tcp
+      ```
+    - Memblokir UDP pada port tertentu:
+
+      ```
+      sudo ufw deny 53/udp
+      ```
+    - Mengizinkan semua TCP connections:
+
+      ```
+      sudo ufw allow proto tcp from any to any
+      ```
+
+    - Memblokir semua UDP connections:
+
+      ```
+      sudo ufw deny proto udp from any to any
+      ```
+
+4. Verifikasi konfigurasi:
+    curl http:
+
+    
