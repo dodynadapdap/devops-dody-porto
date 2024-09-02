@@ -91,52 +91,56 @@
 
         Menggabungkan branch tertentu ke branch saat ini.
 
-    11) ```
+        ![Text Alternatif](foto/9.png)
+
+
+    12) ```
         git branch -d <branch-name>
         ```
         
         Menghapus branch lokal.
 
-        ![Text Alternatif](foto/9.png)
+        ![Text Alternatif](foto/10.png)
 
-    12) ```
+
+    13) ```
         git remote add <name> <url>
         ```
 
         Menambahkan remote repository.
 
-        ![Text Alternatif](foto/10.png)
+        ![Text Alternatif](foto/11.png)
 
-    13) ```
+    14) ```
         git push <remote> <branch>
         ```
 
         Mengirim perubahan ke remote repository.
 
-        ![Text Alternatif](foto/11.png)
+        ![Text Alternatif](foto/12.png)
 
-    14) ```
+    15) ```
         git pull <remote> <branch>
         ```
 
         Mengambil dan menggabungkan perubahan dari remote repository.
 
-        ![Text Alternatif](foto/12.png)
+        ![Text Alternatif](foto/13.png)
 
-    15) ```
+
+    16) ```
         git fetch <remote>
         ```
         Mengambil perubahan dari remote tanpa menggabungkan.
 
-        ![Text Alternatif](foto/13.png)
 
-    16) ```
+    17) ```
         git diff
         ```
 
         Menampilkan perubahan yang belum di-stage.
 
-    17) ```
+    18) ```
         git show <commit>
         ```
 
@@ -144,7 +148,7 @@
 
         ![Text Alternatif](foto/14.png)
 
-    18) ```
+    19) ```
         git stash
         ```
         Menyimpan perubahan sementara yang belum di-commit.
