@@ -31,7 +31,7 @@
        ![Text Alternatif](foto/2.png)
     
     3) ```
-       git clone
+       git add
        ```
 
        Menambahkan file ke area staging.
