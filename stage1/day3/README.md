@@ -23,7 +23,7 @@
 11. Alt + E: Redo
 12. Ctrl + W: Mencari teks
 13. Alt + W: Mengulangi pencarian terakhir
-14. Ctrl + W: Mencari dan mengganti teks
+14. Ctrl + \: Mencari dan mengganti teks
 15. Ctrl + O: Menyimpan file
 16. Ctrl + X: Keluar dari Nano (akan ditanya untuk menyimpan jika ada perubahan)
 17. Ctrl + R: Membuka file baru (insert file)
