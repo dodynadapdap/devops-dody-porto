@@ -28,8 +28,8 @@
 16. Ctrl + X: Keluar dari Nano (akan ditanya untuk menyimpan jika ada perubahan)
 17. Ctrl + R: Membuka file baru (insert file)
 18. Ctrl + G: Menampilkan bantuan
-19. Alt + #: Menampilkan/menyembunyikan nomor baris
-20. Alt + shift + X: Mengaktifkan/menonaktifkan mode mouse
+19. Alt + shift + #: Menampilkan/menyembunyikan nomor baris
+20. Alt  + X: Mengaktifkan/menonaktifkan mode mouse
 
 
 ## Dokumentasi tentang Manipulation Text
