@@ -43,6 +43,8 @@
    ```
    git clone https://github.com/dumbwaysdev/dumbflix-frontend
    ```
+   ![Text Alternatif](foto/1.png)
+
 2. masuk ke direkori repo yang sudah di clone
    ```
    cd dumbflix-frontend/
@@ -59,8 +61,12 @@
    ```
    npm start
    ```
+   ![Text Alternatif](foto/2.png)
+
 
    ini adalah tampilan ketika sudah terdeploy
+   
+   ![Text Alternatif](foto/3.png)
 
 
 ###  Deploy Golang & Python dengan
@@ -74,18 +80,23 @@
     exec bash
     ```
 2. kemudian tambahkan kodingan ini
+   ![Text Alternatif](foto/go2.png)
 
 3. buat file golang
    ```
    nano index.go
    ```
+
 4. kemudian tuliskan scrip berikut
+   ![Text Alternatif](foto/go3.png)
 
 5. kemudian jalankan script golang itu
    ```
    go run index.go
    ```
    output
+   ![Text Alternatif](foto/go4.png)
+
 
 
 - Python
@@ -104,9 +115,29 @@
      ```
      nano index.py
      ```
+     ![Text Alternatif](foto/py1.png)
+ 
   4. jalankan file
      ```
      python3 index.py
      ```
+     ![Text Alternatif](foto/py2.png)
+  
   5. kemudian testing di browser
+     ![Text Alternatif](foto/py3.png)
 
+
+### Implementasikan penggunaan PM2 agar aplikasi kalian dapat berjalan di background
+1. instal terlebih dahulu PM2 nya
+   ```
+   npm install -g pm2
+   ```
+2. jalankan aplikasi python dengan PM2
+   ```
+   pm2 start python3 --name "index.py" -- index.py
+   ```
+   ![Text Alternatif](foto/PM1.png)
+
+   output
+   
+   ![Text Alternatif](foto/PM2.png)
