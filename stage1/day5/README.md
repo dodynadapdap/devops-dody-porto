@@ -80,6 +80,7 @@
     exec bash
     ```
 2. kemudian tambahkan kodingan ini
+     
    ![Text Alternatif](foto/go2.png)
 
 3. buat file golang
@@ -88,6 +89,7 @@
    ```
 
 4. kemudian tuliskan scrip berikut
+   
    ![Text Alternatif](foto/go3.png)
 
 5. kemudian jalankan script golang itu
@@ -95,6 +97,7 @@
    go run index.go
    ```
    output
+
    ![Text Alternatif](foto/go4.png)
 
 
@@ -124,6 +127,7 @@
      ![Text Alternatif](foto/py2.png)
   
   5. kemudian testing di browser
+
      ![Text Alternatif](foto/py3.png)
 
 
