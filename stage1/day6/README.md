@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3d2ecf21-057a-4d63-95d9-51f099aacd8c)# TASK
+# TASK
 1. Jelaskan apa itu Web server dan gambarkan bagaimana cara webserver bekerja.
 2. Buatlah Reverse Proxy untuk aplilkasi yang sudah kalian deploy kemarin. ( dumbflix-frontend) dan implementasikan penggunaan pm2 di aplikasi tersebut, untuk domain nya sesuaikan nama masing" ex: alvin.xyz .
 3. Jelaskan apa itu load balance.
