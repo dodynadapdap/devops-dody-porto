@@ -43,7 +43,7 @@ Cara kerja web server secara umum:
    cd ..
    ```
    ```
-   vim nginx.conf
+   sudo nano nginx.conf
    ```
    tambahkan berikut
 
@@ -57,16 +57,45 @@ Cara kerja web server secara umum:
 
    ![Text Alternatif](foto/proxy3.png)
 
+   kemudian kita masuk ke terminal local kita untuk menset ip dan alamat address kita
+   ```
+   sudo vim /etc/hosts
+   ```
+   ![Text Alternatif](foto/proxy4.png)
+
+   jalankan aplikasi kita
+   ```
+   pm2 start npm --name "dumbflix-frontend" -- start
+   ```
+   ![Text Alternatif](foto/proxy6.png)
+
+
+   selanjutanya kita testing di browser kita alamat address yang sudah kita set tadi
+
+   ![Text Alternatif](foto/proxy5.png)
 
 ### load balance
 Jelaskan apa itu load balance. Load balancing adalah sebuah solusi yang dapat Anda terapkan untuk menstabilkan server. Load balancing merupakan proses pendistribusian traffic atau lalu lintas jaringan secara efisien ke dalam sekelompok server, atau yang lebih dikenal dengan server pool atau server farm. Load balancing ini berguna agar salah satu server dari website yang mendapatkan banyak lalu linta kunjungan tidak mengalami kelebihan beban. ketika salah satu server mati server yang lain bisa menghandlenya
 
 
-           
+### implementasikan loadbalancing
+stepnya hampir sama dengan referse proxy yang kita perlu rubah adalah 
+```
+cd batch21
+```
+```
+sudo nano dody.conf
+```
+kemudian rubah configurasi seperti ini
+
+![Text Alternatif](foto/load.png)
+
+maka ketika kita test vm1 hasilnya seperti ini
+
+![Text Alternatif](foto/load1.png)
 
 
-   
 
-        ![Text Alternatif](foto/proxy.png)
+
 
 
