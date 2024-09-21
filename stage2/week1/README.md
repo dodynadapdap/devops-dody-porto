@@ -45,6 +45,7 @@ Tasks :
 - Remote User
 	- Try to remote your database from your local computer with mysql-client
 
+
 - Deploy database MySQL
 1. Install database mysql nya dulu di terminal linux nya dengan perintah"
    ```
@@ -90,6 +91,7 @@ Tasks :
    CREATE USER dan Database
    
    ![Text Alternatif](foto/database4.png)
+
 
 
 - Role Based
@@ -149,6 +151,8 @@ Tasks :
 
    Perintah SELECT berhasil, tapi INSERT akan gagal.
 
+
+
 - Remote User
 1. Membuat user dan password
 
@@ -181,7 +185,7 @@ Tasks :
 
 
 
-#  Deploy Beckend
+# 2. Deploy Beckend
 - Deploy Wayshub-Backend 
 	- Clone wayshub backend application
 	- Use Node Version 14
