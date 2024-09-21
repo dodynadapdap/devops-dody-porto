@@ -240,11 +240,11 @@ Siapkan dulu semua tools yang di butuhkan untuk menjalankan aplikasi, yaitu repo
 
 6. untuk menguji aplikasi running bisa pergi ke web browser lalu masukan ipaddress:port contoh 103.127.136.49:3000
 
-    ![Text Alternatif](foto/frontend2.png)
+    ![Text Alternatif](foto/frontend3.png)
 
 7.  untuk menguji aplikasi running bisa pergi ke web browser yang sudah kita set di nginx lalu masukan alamataddress contoh dody.studentdumbways.my.id
 
-    ![Text Alternatif](foto/frontend2.png)
+    ![Text Alternatif](foto/frontend4.png)
 
 
 # 4. Web Server
