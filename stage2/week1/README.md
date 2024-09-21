@@ -54,9 +54,12 @@ Siapkan dulu semua tools yang di butuhkan untuk menjalankan aplikasi, yaitu repo
 
    ![Text Alternatif](foto/frontend.png)
    ![Text Alternatif](foto/frontend1.png)
+
+4. kita bisa buat file ecosystem dari pm2 untuk merunning aplikasinya di background
+   
    ![Text Alternatif](foto/frontend2.png)
 
-4. instal nginx
+5. instal nginx
    ```
    sudo apt update
    sudo apt install nginx
@@ -65,5 +68,15 @@ Siapkan dulu semua tools yang di butuhkan untuk menjalankan aplikasi, yaitu repo
 
    ![Text Alternatif](foto/nginx.png)
 
+6. untuk menguji aplikasi running bisa pergi ke web browser lalu masukan ipaddress:port contoh 103.127.136.49:3000
+
+    ![Text Alternatif](foto/frontend2.png)
+
+7.  untuk menguji aplikasi running bisa pergi ke web browser yang sudah kita set di nginx lalu masukan alamataddress contoh dody.studentdumbways.my.id
+
+    ![Text Alternatif](foto/frontend2.png)
+
+   
+   
 
 
