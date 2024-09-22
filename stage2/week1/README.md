@@ -194,8 +194,52 @@ Tasks :
 	- Running migration
 	- Deploy apllication on Top PM2
 
+1. Clone terlebih dahulu Wayshub-Backend
+    ```
+    git clone https://github.com/dumbwaysdev/dumbflix-backend.git
+    ```
+     ![Text Alternatif](foto/beckend.png)
 
- 
+    kemudian kita instal libarry pada aplikasi beckend kita
+    ```
+     npm i
+   ```
+    selanjutnya Copy .env.example to .env
+    ![Text Alternatif](foto/beckend2.png)
+    ![Text Alternatif](foto/beckend3.png)
+    
+    masuk ke configurasi config.json dan ubah konfigurasi development menjadi username, password, datatabse, dan host database sendiri
+
+    ![Text Alternatif](foto/beckend1.png)
+
+    Kemudian kita melakukan deploye
+
+   ![Text Alternatif](foto/beckend4.png)
+
+2. Instal sequelize
+   ```
+   npm i sequelize-cli -g
+   ```
+   ![Text Alternatif](foto/beckend5.png)
+
+3. Setup dabatabase
+   pertama buat atau aktifkan ssh terlebih dahulu pada aplikasi beckend dan database
+   ![Text Alternatif](foto/beckend6.png)
+   ![Text Alternatif](foto/beckend7.png)
+
+   kemudian test ping ke vm database dan lakukan migration data
+   
+   ![Text Alternatif](foto/beckend8.png)
+
+4. Deploye menggunakan pm2
+   
+   ![Text Alternatif](foto/beckend9.png)
+   
+   sekarang beckend terlah terdeploye secara beacground
+
+   ![Text Alternatif](foto/beckend4.png)
+   
+
 # 3. Deploy Frontend   
 Tasks :
 	- Clone wayshub frontendapplication
