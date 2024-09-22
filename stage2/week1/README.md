@@ -303,5 +303,47 @@ Tasks :
      - Generate SSL untuk reverse proxy kalian. 
      - Sedikit chalange coba cari bagaimana cara pengimplementasian Wildcard SSL 
 - Happy Explore :))
+  
+1. Install nginx
+   ```
+   sudo apt update
+   sudo apt install nginx
+   ```
+2. membuat domain pada frontend
+   masuk ke cloudflare dan buat domain
 
+   ![Text Alternatif](foto/webserver.png)
+
+3. kemudian masukkan ubah configurasi pada config/config.json pada beckend
+
+   ![Text Alternatif](foto/webserver1.png)
+
+4. Install certbot
+   ```
+   sudo snap install --classic certbot
+   ```
+   kemudian jalankan cerbot untuk gernerte ssl nya
+
+   ![Text Alternatif](foto/webserver2.png)
+
+5. Kemudian lihat configurasi nginx yang dilakukan untuk reverse proxy beckend apakah sudah tergenere ssl dari certbox nya
+
+   ![Text Alternatif](foto/webserver3.png)
+   ![Text Alternatif](foto/webserver4.png)
+
+6. kemudian kita masuk ke direktori frontend untuk menerapkan api beckend yang sudah tergenerete oleh ssl dari certbox
+
+   ![Text Alternatif](foto/webserver5.png)
+
+7. Jalankan frontend dan beckend menggunakan pm2
+
+   ![Text Alternatif](foto/webserver7.png)
+
+   kemudian kita klik registrasi
+   
+   ![Text Alternatif](foto/webserver6.png)
+
+   ![Text Alternatif](foto/webserver8.png)
+
+   ![Text Alternatif](foto/webserver9.png)
 
