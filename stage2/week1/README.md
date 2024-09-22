@@ -45,6 +45,7 @@ Tasks :
 - Remote User
 	- Try to remote your database from your local computer with mysql-client
 
+
 - Deploy database MySQL
 1. Install database mysql nya dulu di terminal linux nya dengan perintah"
    ```
@@ -90,6 +91,7 @@ Tasks :
    CREATE USER dan Database
    
    ![Text Alternatif](foto/database4.png)
+
 
 
 - Role Based
@@ -149,6 +151,8 @@ Tasks :
 
    Perintah SELECT berhasil, tapi INSERT akan gagal.
 
+
+
 - Remote User
 1. Membuat user dan password
 
@@ -181,7 +185,7 @@ Tasks :
 
 
 
-#  Deploy Beckend
+# 2. Deploy Beckend
 - Deploy Wayshub-Backend 
 	- Clone wayshub backend application
 	- Use Node Version 14
@@ -190,8 +194,52 @@ Tasks :
 	- Running migration
 	- Deploy apllication on Top PM2
 
+1. Clone terlebih dahulu Wayshub-Backend
+    ```
+    git clone https://github.com/dumbwaysdev/dumbflix-backend.git
+    ```
+     ![Text Alternatif](foto/beckend.png)
 
- 
+    kemudian kita instal libarry pada aplikasi beckend kita
+    ```
+     npm i
+   ```
+    selanjutnya Copy .env.example to .env
+    ![Text Alternatif](foto/beckend2.png)
+    ![Text Alternatif](foto/beckend3.png)
+    
+    masuk ke configurasi config.json dan ubah konfigurasi development menjadi username, password, datatabse, dan host database sendiri
+
+    ![Text Alternatif](foto/beckend1.png)
+
+    Kemudian kita melakukan deploye
+
+   ![Text Alternatif](foto/beckend4.png)
+
+2. Instal sequelize
+   ```
+   npm i sequelize-cli -g
+   ```
+   ![Text Alternatif](foto/beckend5.png)
+
+3. Setup dabatabase
+   pertama buat atau aktifkan ssh terlebih dahulu pada aplikasi beckend dan database
+   ![Text Alternatif](foto/beckend6.png)
+   ![Text Alternatif](foto/beckend7.png)
+
+   kemudian test ping ke vm database dan lakukan migration data
+   
+   ![Text Alternatif](foto/beckend8.png)
+
+4. Deploye menggunakan pm2
+   
+   ![Text Alternatif](foto/beckend9.png)
+   
+   sekarang beckend terlah terdeploye secara beacground
+
+   ![Text Alternatif](foto/beckend4.png)
+   
+
 # 3. Deploy Frontend   
 Tasks :
 	- Clone wayshub frontendapplication
@@ -236,11 +284,11 @@ Siapkan dulu semua tools yang di butuhkan untuk menjalankan aplikasi, yaitu repo
 
 6. untuk menguji aplikasi running bisa pergi ke web browser lalu masukan ipaddress:port contoh 103.127.136.49:3000
 
-    ![Text Alternatif](foto/frontend2.png)
+    ![Text Alternatif](foto/frontend3.png)
 
 7.  untuk menguji aplikasi running bisa pergi ke web browser yang sudah kita set di nginx lalu masukan alamataddress contoh dody.studentdumbways.my.id
 
-    ![Text Alternatif](foto/frontend2.png)
+    ![Text Alternatif](foto/frontend4.png)
 
 
 # 4. Web Server
