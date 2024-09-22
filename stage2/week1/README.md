@@ -1,4 +1,4 @@
-# 0 Server
+![image](https://github.com/user-attachments/assets/2786ad30-bded-427c-a86b-f04ac6909e18)# 0 Server
 Tasks :
 - Create new user for all of your server
 - The server only can login with SSH-KEY without using password at all
@@ -346,4 +346,9 @@ Tasks :
    ![Text Alternatif](foto/webserver8.png)
 
    ![Text Alternatif](foto/webserver9.png)
+
+
+8. while card
+   
+   ![image](https://github.com/user-attachments/assets/f61ecaaf-06ae-4821-9696-5b8d834d201b)
 
