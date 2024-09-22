@@ -205,6 +205,7 @@ Tasks :
      npm i
    ```
     selanjutnya Copy .env.example to .env
+   
     ![Text Alternatif](foto/beckend2.png)
     ![Text Alternatif](foto/beckend3.png)
     
@@ -216,13 +217,13 @@ Tasks :
 
    ![Text Alternatif](foto/beckend4.png)
 
-2. Instal sequelize
+3. Instal sequelize
    ```
    npm i sequelize-cli -g
    ```
    ![Text Alternatif](foto/beckend5.png)
 
-3. Setup dabatabase
+4. Setup dabatabase
    pertama buat atau aktifkan ssh terlebih dahulu pada aplikasi beckend dan database
    ![Text Alternatif](foto/beckend6.png)
    ![Text Alternatif](foto/beckend7.png)
@@ -231,7 +232,7 @@ Tasks :
    
    ![Text Alternatif](foto/beckend8.png)
 
-4. Deploye menggunakan pm2
+5. Deploye menggunakan pm2
    
    ![Text Alternatif](foto/beckend9.png)
    
