@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2786ad30-bded-427c-a86b-f04ac6909e18)# 0 Server
+# 0 Server
 Tasks :
 - Create new user for all of your server
 - The server only can login with SSH-KEY without using password at all
