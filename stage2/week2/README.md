@@ -133,6 +133,8 @@ Tasks :
    # membuat custom network team
    docker network create team2_network 
    ```
+   dan cek apakah network yang sudah kita create tadi sudah ada atau tidak
+   
    ![Text Alternatif](foto/staging5.png)
 
 4. deployee database
