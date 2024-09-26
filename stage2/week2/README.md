@@ -95,22 +95,60 @@ Tasks :
      ```
 
      isilah file scriptnya sebagai berikut
-     ```
-	services:
-	
-	  literature-be:
-	    image: team2/literature/backend:production
-	    restart: always
-	    environment:
-	      DB_USERNAME: team2
-	      DB_PASSWORD: Thebe@tles45
-	      DB_DATABASE: literature
-	      DB_HOST: 103.196.153.76
-	    ports:
-	      - "5000:5000"
-
-     ```
+    
 
      
    - Database
+     ```
+     # membuat file docker compose
+     nano docker-compose.yml
+     ```
+
+     isilah file scriptnya sebagai berikut
+
+2. Penamaan Image
+   masuk ke server nginx dan edit file configurasi nginx.conf
+   ```
+   # masuk ke direktori nginx yang dibuat
+   cd /apps/nginx/
+
+   # buat file configurasi nginx
+   nano nginx.conf
+   ```
+
+   isilah file script nginx sebagai berikut
+
+   ```
+events {
+    worker_connections 1024;
+}
+
+http {
+    server {
+        listen 8080;  # Untuk frontend
+        server_name team2.staging.studentdumbways.my.id;
+
+        location / {
+            proxy_pass http://frontend:80;  # Mengarahkan ke frontend
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+    server {
+        listen 8081;  # Untuk API
+        server_name api.team2.staging.studentdumbways.my.id;
+
+        location / {
+            proxy_pass http://backend:5000;  # Mengarahkan ke backend
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+   ```
      
