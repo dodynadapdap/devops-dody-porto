@@ -46,3 +46,106 @@ Tasks :
          - Backend: api.team1.studentdumbways.my.id  
 - Push image ke docker registry kalian masing".
 - Aplikasi dapat berjalan dengan sesuai seperti melakukan login/register.
+
+
+### Staging
+1. Buat suatu docker compose Web Server, Frontend, Backend, Database
+   - Web Server
+     Pertama kita membuat file docker composenya terlebih dahulu
+     ```
+     # membuat direktori untuk letak file docker compose
+     mkidr apps
+
+     # membuat file docker compose
+     nano docker-compose.yml
+     ```
+     isilah script docker-compose.yml berikut
+
+     ```
+     services:
+	  db:
+	    image: mysql:5.7
+	    container_name: db_staging
+	    restart: always
+	    environment:
+	      MYSQL_ROOT_PASSWORD: Thebe@tles45
+	      MYSQL_DATABASE: literature
+	      MYSQL_USER: alvaro
+	      MYSQL_PASSWORD: Thebe@tles45
+	    volumes:
+	      - ./mysql:/var/lib/mysql
+	    ports:
+	      - "3306:3306"
+	    networks:
+	      - team2_network
+	
+	  backend:
+	    image: team2/literature/backend:staging
+	    container_name: backend_staging
+	    environment:
+	      DB_USERNAME: alvaro
+	      DB_PASSWORD: Thebe@tles45
+	      DB_DATABASE: literature
+	      DB_HOST: db
+	    ports:
+	      - "5000:5000"
+	    depends_on:
+	      - db
+	    networks:
+	      - team2_network
+	
+	  frontend:
+	    image: team2/literature/frontend:staging  # Ubah dari backend ke frontend
+	    container_name: frontend_staging
+	    stdin_open: true
+	    ports:	
+	      - "3000:80"
+	    depends_on:
+	      - backend
+	      - db
+	    networks:
+	      - team2_network
+	
+	  nginx:
+	    image: nginx:latest
+	    container_name: nginx_staging
+	    volumes:
+	      - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # Pastikan ada tanda "-" di depan
+	    ports:
+	      - "8080:80"
+	      - "8081:80"
+	    depends_on:
+	      - frontend
+	      - backend
+	    networks:
+	      - team2_network
+	
+	networks:
+	  team2_network:
+	    driver: bridge
+     ```
+
+   - Frontend
+     ```
+     # membuat direktori untuk letak file docker compose frontend
+     mkidr literature-frontend
+
+     # membuat file docker compose
+     nano docker-compose.yml
+     ```
+
+     isilah file docker compose sebagai berikut
+
+     ```
+     services:
+	  frontend:
+	    image: team2/literature/frontend:production
+	    container_name: literature-frontend
+	    ports:
+	      - "3000:3000"
+	    restart: always
+	    stdin_open: true
+     ```
+     
+   - Backend
+   - Database
