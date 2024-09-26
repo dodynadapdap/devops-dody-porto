@@ -138,6 +138,16 @@ Tasks :
    ![Text Alternatif](foto/staging5.png)
 
 4. deployee database
+     ```
+   # matikan terlebih dahulu servernya
+   docker compose down
+     
+   # hidupkan kembali servernya
+   docker compose up -d
+     
+   # cek status dari database yang sudah di deployee
+   docker compose ps -a  
+   ```
    kemudian kita deployee database yang sudah dibuat
 
    ![Text Alternatif](foto/staging6.png)
