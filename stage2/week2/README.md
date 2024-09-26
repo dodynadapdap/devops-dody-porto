@@ -61,68 +61,7 @@ Tasks :
      ```
      
      isilah script docker-compose.yml berikut
-     ```
-	services:
-		  db:
-		    image: mysql:5.7
-		    container_name: db_staging
-		    restart: always
-		    environment:
-		      MYSQL_ROOT_PASSWORD: Thebe@tles45
-		      MYSQL_DATABASE: literature
-		      MYSQL_USER: alvaro
-		      MYSQL_PASSWORD: Thebe@tles45
-		    volumes:
-		      - ./mysql:/var/lib/mysql
-		    ports:
-		      - "3306:3306"
-		    networks:
-		      - team2_network
-		
-		  backend:
-		    image: team2/literature/backend:staging
-		    container_name: backend_staging
-		    environment:
-		      DB_USERNAME: alvaro
-		      DB_PASSWORD: Thebe@tles45
-		      DB_DATABASE: literature
-		      DB_HOST: db
-		    ports:
-		      - "5000:5000"
-		    depends_on:
-		      - db
-		    networks:
-		      - team2_network
-		
-		  frontend:
-		    image: team2/literature/frontend:staging  # Ubah dari backend ke frontend
-		    container_name: frontend_staging
-		    stdin_open: true
-		    ports:	
-		      - "3000:80"
-		    depends_on:
-		      - backend
-		      - db
-		    networks:
-		      - team2_network
-		
-		  nginx:
-		    image: nginx:latest
-		    container_name: nginx_staging
-		    volumes:
-		      - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # Pastikan ada tanda "-" di depan
-		    ports:
-		      - "8080:80"
-		      - "8081:80"
-		    depends_on:
-		      - frontend
-		      - backend
-		    networks:
-		      - team2_network
-	networks:
-		team2_network:
-			driver: bridge
-     ```
+     
 
    - Frontend
      ```
@@ -147,4 +86,31 @@ Tasks :
      ```
      
    - Backend
+     ```
+     # buat terlebih dahulu repositori beckend
+     mkdir literature-backend
+
+     # buat file docker compose
+     nano docker-compose.yaml
+     ```
+
+     isilah file scriptnya sebagai berikut
+     ```
+	services:
+	
+	  literature-be:
+	    image: team2/literature/backend:production
+	    restart: always
+	    environment:
+	      DB_USERNAME: team2
+	      DB_PASSWORD: Thebe@tles45
+	      DB_DATABASE: literature
+	      DB_HOST: 103.196.153.76
+	    ports:
+	      - "5000:5000"
+
+     ```
+
+     
    - Database
+     
