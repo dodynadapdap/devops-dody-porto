@@ -126,7 +126,6 @@ Tasks :
      ```
 
    - Frontend
-     ```
      # membuat direktori untuk letak file docker compose frontend
      mkidr literature-frontend
 
