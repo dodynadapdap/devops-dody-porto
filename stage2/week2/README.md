@@ -119,10 +119,10 @@ Tasks :
 	      - backend
 	    networks:
 	      - team2_network
-	
-	networks:
-	  team2_network:
-	    driver: bridge
+
+     networks:
+	team2_network:
+  		driver: bridge
      ```
 
    - Frontend
