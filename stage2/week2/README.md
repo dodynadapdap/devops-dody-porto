@@ -61,7 +61,9 @@ Tasks :
      ```
      
      isilah script docker-compose.yml berikut
-     
+
+     ![Text Alternatif](foto/staging.png)
+
 
    - Frontend
      ```
@@ -73,6 +75,8 @@ Tasks :
      ```
 
      isilah file docker compose sebagai berikut
+
+     ![Text Alternatif](foto/staging1.png)
 
      ```
      services:
@@ -96,6 +100,7 @@ Tasks :
 
      isilah file scriptnya sebagai berikut
     
+     ![Text Alternatif](foto/staging2.png)
 
      
    - Database
@@ -105,6 +110,9 @@ Tasks :
      ```
 
      isilah file scriptnya sebagai berikut
+
+     ![Text Alternatif](foto/staging3.png)
+
 
 2. Penamaan Image
    masuk ke server nginx dan edit file configurasi nginx.conf
@@ -118,37 +126,20 @@ Tasks :
 
    isilah file script nginx sebagai berikut
 
+   ![Text Alternatif](foto/staging4.png)
+
+3. Di dalam docker-compose file buat suatu custom network dengan nama team
    ```
-events {
-    worker_connections 1024;
-}
-
-http {
-    server {
-        listen 8080;  # Untuk frontend
-        server_name team2.staging.studentdumbways.my.id;
-
-        location / {
-            proxy_pass http://frontend:80;  # Mengarahkan ke frontend
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-        }
-    }
-
-    server {
-        listen 8081;  # Untuk API
-        server_name api.team2.staging.studentdumbways.my.id;
-
-        location / {
-            proxy_pass http://backend:5000;  # Mengarahkan ke backend
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-        }
-    }
-}
+   # membuat custom network team
+   docker network create team2_network 
    ```
+   dan cek apakah network yang sudah kita create tadi sudah ada atau tidak
+   
+   ![Text Alternatif](foto/staging5.png)
+
+4. deployee database
+   kemudian kita deployee database yang sudah dibuat
+
+   ![Text Alternatif](foto/staging6.png)
+
      
