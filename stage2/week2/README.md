@@ -391,6 +391,8 @@ docker compose ps -a
 ![image](https://github.com/user-attachments/assets/76a21c0a-66d9-47e9-aae6-dadf302dda4d)
 ![image](https://github.com/user-attachments/assets/466b0216-9b6b-4416-8362-417b69df983f)
 ![image](https://github.com/user-attachments/assets/fde2e656-d6f0-4044-a768-7e48d7601934)
+![image](https://github.com/user-attachments/assets/88825b06-fcfd-4dc3-91ce-999e2ddc0ed0)
+
 
   
 
