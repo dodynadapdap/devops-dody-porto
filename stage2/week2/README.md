@@ -95,7 +95,7 @@ terakhir cek apakah docker kita sudah terinstal atau belum
 
 ![image](https://github.com/user-attachments/assets/42a8c5fd-8751-4da3-8878-ab37d9f594e0)
 
-### Staging
+#### Staging
 1. Buat suatu docker compose Web Server, Frontend, Backend, Database
    - Web Server
      Pertama kita membuat file docker composenya terlebih dahulu
@@ -199,4 +199,49 @@ terakhir cek apakah docker kita sudah terinstal atau belum
 
    ![Text Alternatif](foto/staging6.png)
 
+
+#### Production
+1. database
+   - Buat direktori untuk dijadikan volume
+     ```
+     mkdir db-literature
+     ```
+
+     buat file docker-compose di server database dan membuat volume
+     ```
+     nano docker-compose.yaml
+     ```
+     ![image](https://github.com/user-attachments/assets/67cdc0cf-f4f2-489b-bf54-1ea57978643c)
+
+     Jalankan docker compose.
+
+     ```
+     docker compose up -d
+     ```
+
+     Check apakah container sudah berjalan dengan sukses
+     ```
+     docker compose ps -a
+     ```
+     ![image](https://github.com/user-attachments/assets/68edcbe1-7ff2-4f0b-b0f1-2eb66104a410)
+
+     cek untuk mengetahui database yang kita buat tadi berhasil atau tidak
+
+     ```
+     # masuk ke container
+     docker compose exec db bash
+     ```
+
+     ![image](https://github.com/user-attachments/assets/ba4df0b2-d850-4d81-8e4f-567d523e89ed)
+
+2. backend
+   - configurasi file config.json dan isilah sesuai kebutuhan
+
+     ![Uploading image.png…]()
+
      
+
+
+     
+     
+
