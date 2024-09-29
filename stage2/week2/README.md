@@ -277,12 +277,12 @@ terakhir cek apakah docker kita sudah terinstal atau belum
     ```
   - Jalankan script compose dengan perintah dan check apakah sudah berjalan
     ```
-    # Command untuk running compose file
-    docker compose up -d
+     # Command untuk running compose file
+     docker compose up -d
 
-    # Command untuk melihat process status dari docker compose
+     # Command untuk melihat process status dari docker compose
      docker compose ps -a
-   ```
+    ```
    ![image](https://github.com/user-attachments/assets/95b22335-0f32-4283-9bcc-88e9321c012f)
 
 
