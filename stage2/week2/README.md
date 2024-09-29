@@ -339,7 +339,60 @@ http {
     }
 }
 ```
+Lakukan Wildcard SSL dengan Certbot
+- Sebelumnya saya membuat direktori .secret dan membuat file config.ini dengan isi dns cloudflare api token
 
+Lalu jalankan command ini untuk mendapatkan certificate ssl
+```
+sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials ~/.secret/config.ini -d *.team2.studentdumbways.my.id -d team2.studentdumbways.my.id 
+```
+
+Buat file docker compose untuk webserver
+```
+# buat direktori
+mkdir nginx
+
+# buat file configurasi
+nano docker-compose.yaml
+```
+isilah scripnya sebagai berikut
+```
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/live/team2.studentdumbways.my.id/fullchain.pem:/etc/nginx/ssl/fullchain.pem
+      - /etc/letsencrypt/live/team2.studentdumbways.my.id/privkey.pem:/etc/nginx/ssl/privkey.pem
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+```
+
+![image](https://github.com/user-attachments/assets/49a5e924-13e1-487d-bd26-8f603bc7f774)
+
+Jalankan script compose dengan perintah dan check apakah sudah berjalan
+```
+# Command untuk running compose file
+docker compose up -d
+
+# Command untuk melihat process status dari docker compose
+docker compose ps -a
+```
+
+![image](https://github.com/user-attachments/assets/130b0f57-45f2-49be-a901-f2b42a1dba88)
+
+
+
+### Pembuktian kalau aplikasi kita sudah berjalan
+
+![image](https://github.com/user-attachments/assets/24ab9360-b397-4c35-b5f4-6348ba83fb31)
+![image](https://github.com/user-attachments/assets/76a21c0a-66d9-47e9-aae6-dadf302dda4d)
+![image](https://github.com/user-attachments/assets/466b0216-9b6b-4416-8362-417b69df983f)
+![image](https://github.com/user-attachments/assets/fde2e656-d6f0-4044-a768-7e48d7601934)
+
+  
 
      
 
