@@ -47,6 +47,53 @@ Tasks :
 - Push image ke docker registry kalian masing".
 - Aplikasi dapat berjalan dengan sesuai seperti melakukan login/register.
 
+### Add User
+1. membuat 4 server dan membuat user dengan nama team masing-masing server.
+   ```
+   sudo adduser
+   ```
+   disini saya membuat 4 server
+
+   ![image](https://github.com/user-attachments/assets/524f5bc9-ebb2-422a-92b4-43dd6334d7f3)
+
+   ![image](https://github.com/user-attachments/assets/441ef39c-1bb2-4be0-b5b0-ae769869ece2)
+
+2. server name
+   - database
+  
+     ![image](https://github.com/user-attachments/assets/2d657112-8434-4a76-9ff3-d2be8703dd71)
+
+   - backend
+  
+     ![image](https://github.com/user-attachments/assets/647c7684-8c08-4eb3-8710-323530e45d97)
+
+   - frontend
+  
+     ![image](https://github.com/user-attachments/assets/73850d29-2422-41e0-bfdb-a9a536f0f8b2)
+
+   - webserver
+
+     ![image](https://github.com/user-attachments/assets/480434a5-66b5-495c-887a-d195f45ece3f)
+
+### Install Docker
+Buat script file .sh untuk install docker
+
+![image](https://github.com/user-attachments/assets/7f536f52-fba6-4362-b57b-14add8cc4fdb)
+
+jalankan ```sudo chmod +x <nama_script.sh>```, untuk membuat file script kita bisa di execute
+
+jalankan script
+```
+# run script
+sudo sh install-docker.sh
+
+# atau
+sudo ./install-docker.sh
+```
+
+terakhir cek apakah docker kita sudah terinstal atau belum
+
+![image](https://github.com/user-attachments/assets/42a8c5fd-8751-4da3-8878-ab37d9f594e0)
 
 ### Staging
 1. Buat suatu docker compose Web Server, Frontend, Backend, Database
