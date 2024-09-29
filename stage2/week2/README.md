@@ -262,7 +262,7 @@ terakhir cek apakah docker kita sudah terinstal atau belum
     ```
     kemudian isilah scriptnya sebagai berikut
     ```
-    	services:
+    services:
 
 	  literature-be:
 	    image: team2/literature/backend:production
