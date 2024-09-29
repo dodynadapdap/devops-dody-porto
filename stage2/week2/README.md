@@ -294,6 +294,51 @@ terakhir cek apakah docker kita sudah terinstal atau belum
 
 4. Webserver
 - Konfigurasi Reverse Proxy Nginx
+```
+events {
+    worker_connections 1024;
+}
+
+http {
+    server {
+        listen 80;
+        server_name team2.studentdumbways.my.id;
+        return 301 https://$host$request_uri;
+    }
+
+    server {
+        listen 443 ssl;
+        server_name team2.studentdumbways.my.id;
+
+        ssl_certificate /etc/nginx/ssl/fullchain.pem;
+        ssl_certificate_key /etc/nginx/ssl/privkey.pem; # Pastikan ini sesuai dengan volume yang di-mount
+
+        location / {
+            proxy_pass http://103.127.136.49:3000/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+    server {
+        listen 443 ssl;
+        server_name api.team2.studentdumbways.my.id;
+
+        ssl_certificate /etc/nginx/ssl/fullchain.pem;  # Pastikan ini sesuai dengan volume yang di-mount
+        ssl_certificate_key /etc/nginx/ssl/privkey.pem; # Pastikan ini sesuai dengan volume yang di-mount
+
+        location / {
+            proxy_pass http://103.127.136.47:5000/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+```
 
 
      
