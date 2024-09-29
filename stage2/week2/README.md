@@ -231,13 +231,98 @@ terakhir cek apakah docker kita sudah terinstal atau belum
      # masuk ke container
      docker compose exec db bash
      ```
+     ![image](https://github.com/user-attachments/assets/283f2eb4-9b22-4c8e-841d-6ba8b469d2b4)
 
-     ![image](https://github.com/user-attachments/assets/ba4df0b2-d850-4d81-8e4f-567d523e89ed)
 
 2. backend
    - configurasi file config.json dan isilah sesuai kebutuhan
 
-     ![Uploading image.png…]()
+     ![image](https://github.com/user-attachments/assets/ba4df0b2-d850-4d81-8e4f-567d523e89ed)
+  
+   - Di file package.json, saya menambahkan script untuk menjalankan migrate database dengan sequelize-cli
+     ```
+     "scripts": {
+     "start": "nodemon server.js",
+     "migrate": "sequelize-cli db:migrate"
+     }
+     ```
+   - Buat Dockerfile untuk build image | Pastikan size image sekecil mungkin dengan multistage build
+     ```
+     	FROM node:16-alpine as builder
+
+	WORKDIR /app
+	
+	COPY package*.json ./
+	
+	RUN npm install
+	RUN npm install nodemon
+	
+	COPY . .
+	
+	RUN npm run migrate
+	
+	
+	#Build
+	
+	FROM node:16-alpine
+	
+	WORKDIR /app
+	
+	COPY --from=builder /app .
+	
+	CMD ["npm", "start"]
+	
+	EXPOSE 5000
+     ```
+     ![image](https://github.com/user-attachments/assets/9b50f9d4-ff98-4ddb-a065-41b2fa42b0df)
+
+   - Build image yang sudah dibuat
+     ```
+     docker build -t team2/literature/backend:production . 
+     ```
+     ![image](https://github.com/user-attachments/assets/1cbd5fd5-3dfd-4a5d-96c1-31e06c4c01ea)
+
+   - Buat file compose untuk mengkonfigurasi layanan-layanan yang dibutuhkan dalam aplikasi dan menjalankannya dengan satu perintah
+    ```
+    nano docker-compose.yam
+    ```
+    kemudian isilah scriptnya sebagai berikut
+    ```
+    	services:
+
+	  literature-be:
+	    image: team2/literature/backend:production
+	    restart: always
+	    environment:
+	      DB_USERNAME: team2
+	      DB_PASSWORD: Thebe@tles45
+	      DB_DATABASE: literature
+	      DB_HOST: 103.196.153.76
+	    ports:
+	      - "5000:5000"
+    ```
+  - Jalankan script compose dengan perintah dan check apakah sudah berjalan
+    ```
+    # Command untuk running compose file
+    docker compose up -d
+
+    # Command untuk melihat process status dari docker compose
+     docker compose ps -a
+   ```
+   ![image](https://github.com/user-attachments/assets/95b22335-0f32-4283-9bcc-88e9321c012f)
+
+
+3. frontend
+   - Konfigurasikan Frontend agar bisa terhubung dengan Backend
+
+   ![image](https://github.com/user-attachments/assets/019878c7-3749-4748-b867-93f03b0e5ae3)
+
+
+4. Webserver
+- Konfigurasi Reverse Proxy Nginx
+
+
+     
 
      
 
