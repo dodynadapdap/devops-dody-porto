@@ -247,33 +247,7 @@ terakhir cek apakah docker kita sudah terinstal atau belum
      }
      ```
    - Buat Dockerfile untuk build image | Pastikan size image sekecil mungkin dengan multistage build
-     ```
-     	FROM node:16-alpine as builder
-
-	WORKDIR /app
-	
-	COPY package*.json ./
-	
-	RUN npm install
-	RUN npm install nodemon
-	
-	COPY . .
-	
-	RUN npm run migrate
-	
-	
-	#Build
-	
-	FROM node:16-alpine
-	
-	WORKDIR /app
-	
-	COPY --from=builder /app .
-	
-	CMD ["npm", "start"]
-	
-	EXPOSE 5000
-     ```
+     
      ![image](https://github.com/user-attachments/assets/9b50f9d4-ff98-4ddb-a065-41b2fa42b0df)
 
    - Build image yang sudah dibuat
