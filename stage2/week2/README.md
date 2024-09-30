@@ -49,31 +49,46 @@ Tasks :
 
 ### Add User
 1. membuat 4 server dan membuat user dengan nama team masing-masing server.
-   ```
-   sudo adduser <nama user>
-   ```
-   disini saya membuat 4 server
+  Buat User Baru Untuk Setiap Server - Team2
+```
+# Menambahkan user
+sudo adduser team2-xxx
 
-   ![image](https://github.com/user-attachments/assets/524f5bc9-ebb2-422a-92b4-43dd6334d7f3)
+# Menambahkan user baru agar punya sudo (super user do)
+sudo usermod -aG sudo team2-xxx
+```
 
-   ![image](https://github.com/user-attachments/assets/441ef39c-1bb2-4be0-b5b0-ae769869ece2)
+- Server Database
 
-2. server name
-   - database
-  
-     ![image](https://github.com/user-attachments/assets/2d657112-8434-4a76-9ff3-d2be8703dd71)
+![image](https://github.com/user-attachments/assets/b505be52-642f-40ea-9e46-59be9b272a74)
 
-   - backend
-  
-     ![image](https://github.com/user-attachments/assets/647c7684-8c08-4eb3-8710-323530e45d97)
+- Server Backend
 
-   - frontend
-  
-     ![image](https://github.com/user-attachments/assets/73850d29-2422-41e0-bfdb-a9a536f0f8b2)
+![image](https://github.com/user-attachments/assets/75b3808e-2a1e-4981-a9c7-0fe3363ebff0)
 
-   - webserver
+- Server Frontend
+![image](https://github.com/user-attachments/assets/af8bf900-2e57-4fda-b27f-d2135eb3560e)
 
-     ![image](https://github.com/user-attachments/assets/480434a5-66b5-495c-887a-d195f45ece3f)
+- Webserver
+
+![image](https://github.com/user-attachments/assets/8293b42b-7e4b-4db3-a391-591241d99862)
+
+3. Instal Docker dengan Bash Script di setiap server
+- buat file .sh untuk menampung script
+```
+nano install_docker.sh
+```
+![image](https://github.com/user-attachments/assets/b6b84009-cd2f-4f83-9a84-834850d56fc3)
+
+- jalankan ```sudo chmod +x <nama_script.sh>``` untuk membuat file script kita bisa di execute
+- jalankan script dengan menggunakan command berikut
+```
+# run script
+sudo sh install-docker.sh
+
+# atau
+sudo ./install-docker.sh
+```
 
 ### Install Docker
 Buat script file .sh untuk install docker
