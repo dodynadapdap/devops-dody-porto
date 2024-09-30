@@ -199,6 +199,7 @@ sudo ./install-docker.sh
 
 ![image](https://github.com/user-attachments/assets/1c4f1f5d-3f76-4f13-a61b-ccaa97a0e7f1)
 ![image](https://github.com/user-attachments/assets/cad18cac-c58d-4670-b9b4-faaa8ed4d208)
+![image](https://github.com/user-attachments/assets/7503d1c2-ff3a-4dbf-95af-1da6771a7dab)
 ![image](https://github.com/user-attachments/assets/38d4b3ff-de8a-4055-b99c-bb24aa264735)
 
 
