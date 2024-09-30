@@ -205,8 +205,6 @@ terakhir cek apakah docker kita sudah terinstal atau belum
 ![image](https://github.com/user-attachments/assets/1c4f1f5d-3f76-4f13-a61b-ccaa97a0e7f1)
 ![image](https://github.com/user-attachments/assets/cad18cac-c58d-4670-b9b4-faaa8ed4d208)
 ![image](https://github.com/user-attachments/assets/38d4b3ff-de8a-4055-b99c-bb24aa264735)
-![image](https://github.com/user-attachments/assets/ac00b5c3-baea-446e-b214-f42c5f514f0f)
-![image](https://github.com/user-attachments/assets/88825b06-fcfd-4dc3-91ce-999e2ddc0ed0)
 
 
   
