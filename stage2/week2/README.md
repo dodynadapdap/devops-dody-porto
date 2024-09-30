@@ -67,6 +67,7 @@ sudo usermod -aG sudo team2-xxx
 ![image](https://github.com/user-attachments/assets/75b3808e-2a1e-4981-a9c7-0fe3363ebff0)
 
 - Server Frontend
+  
 ![image](https://github.com/user-attachments/assets/af8bf900-2e57-4fda-b27f-d2135eb3560e)
 
 - Webserver
