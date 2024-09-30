@@ -89,27 +89,6 @@ sudo sh install-docker.sh
 # atau
 sudo ./install-docker.sh
 ```
-
-### Install Docker
-Buat script file .sh untuk install docker
-
-![image](https://github.com/user-attachments/assets/7f536f52-fba6-4362-b57b-14add8cc4fdb)
-
-jalankan ```sudo chmod +x <nama_script.sh>```, untuk membuat file script kita bisa di execute
-
-jalankan script
-```
-# run script
-sudo sh install-docker.sh
-
-# atau
-sudo ./install-docker.sh
-```
-
-terakhir cek apakah docker kita sudah terinstal atau belum
-
-![image](https://github.com/user-attachments/assets/42a8c5fd-8751-4da3-8878-ab37d9f594e0)
-
 #### Staging
 1. Buat suatu docker compose Web Server, Frontend, Backend, Database
    - Web Server
