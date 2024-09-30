@@ -298,5 +298,10 @@ docker compose ps -a
 
 pembuktian aplikasi kita apakah sudah berjalan
 
+![image](https://github.com/user-attachments/assets/b09535c0-78d1-47fc-aa03-0f3b1f01d446)
+![image](https://github.com/user-attachments/assets/7eda5d3f-dedd-4310-b164-8cd315b36b32)
+![image](https://github.com/user-attachments/assets/183de4c2-c068-44be-94d5-5269f792eaa2)
+![image](https://github.com/user-attachments/assets/50ab30ac-d0ca-47bf-9dd9-1c19073364c6)
+![image](https://github.com/user-attachments/assets/fb4631a2-2d12-412b-8c77-a204902ffc0a)
 
 
