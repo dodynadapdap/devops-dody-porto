@@ -50,7 +50,7 @@ Tasks :
 ### Add User
 1. membuat 4 server dan membuat user dengan nama team masing-masing server.
    ```
-   sudo adduser
+   sudo adduser <nama user>
    ```
    disini saya membuat 4 server
 
