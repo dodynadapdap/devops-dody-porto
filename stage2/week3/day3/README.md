@@ -155,4 +155,6 @@ sudo certbot --nginx -d <domaingrafana>
 
 ![image](https://github.com/user-attachments/assets/75510271-326a-4d33-8dd8-95f1fd76f33b)
 
+![image](https://github.com/user-attachments/assets/5bcd9cb8-4837-4fd4-9523-04d35cc3fa61)
+
 
