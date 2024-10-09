@@ -1,12 +1,12 @@
 # VPC Network
 resource "google_compute_network" "vpc_network" {
-  name                    = "my-custom-vpc"
+  name                    = "my-vpc"
   auto_create_subnetworks = false
 }
 
 # Subnet
 resource "google_compute_subnetwork" "subnet" {
-  name          = "my-custom-subnet"
+  name          = "my-subnet-custom"
   ip_cidr_range = "10.0.1.0/24"
   region        = var.gcp_region
   network       = google_compute_network.vpc_network.id
@@ -14,7 +14,7 @@ resource "google_compute_subnetwork" "subnet" {
 
 # Firewall rule
 resource "google_compute_firewall" "allow_all" {
-  name    = "allow-all"
+  name    = "all-allow"
   network = google_compute_network.vpc_network.name
 
   allow {
@@ -27,12 +27,12 @@ resource "google_compute_firewall" "allow_all" {
 
 # Static IPs
 resource "google_compute_address" "static_ip_ubuntu" {
-  name = "static-ip-ubuntu"
+  name = "static-ubuntu-ip"
   region = var.gcp_region
 }
 
 resource "google_compute_address" "static_ip_debian" {
-  name = "static-ip-debian"
+  name = "static-debian-ip"
   region = var.gcp_region
 }
 
@@ -102,7 +102,7 @@ resource "google_compute_instance" "gcp_debian" {
 
 # Block Storage for Ubuntu
 resource "google_compute_disk" "ubuntu_block_storage" {
-  name = "ubuntu-block-storage"
+  name = "block-storage-ubuntu"
   type = "pd-ssd"
   zone = var.gcp_zone
   size = 10  # 10 GB
@@ -116,7 +116,7 @@ resource "google_compute_attached_disk" "ubuntu_attached_disk" {
 
 # Block Storage for Debian
 resource "google_compute_disk" "debian_block_storage" {
-  name = "debian-block-storage"
+  name = "block-storage-debian"
   type = "pd-ssd"
   zone = var.gcp_zone
   size = 10  # 10 GB

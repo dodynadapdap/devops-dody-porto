@@ -1,0 +1,9 @@
+docker_compose_file: docker-compose.yaml
+docker_compose_dest: /home/dody/monitoring
+prometheus_file: prometheus.yml
+prometheus_dest: /home/dody/monitoring/prometheus
+monitoring_owner: dody
+monitoring_group: dody
+docker_compose_file_mode: '700'
+prometheus_file_mode: '700'
+docker_compose_command: "{% if ansible_distribution == 'Debian' %}docker-compose{% else %}docker compose{% endif %} up -d"

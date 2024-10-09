@@ -1,0 +1,3 @@
+new_user: dodydumbways
+new_user_password: "{{ 'Nadapdap123!' | password_hash('sha512') }}"
+ssh_key_file: dody.pub

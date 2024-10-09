@@ -1,0 +1,51 @@
+- name: Create directory monitoring
+  ansible.builtin.file:
+    path: "{{ docker_compose_dest }}"
+    state: directory
+    owner: "{{ monitoring_owner }}"
+    group: "{{ monitoring_group }}"
+    mode: "{{ docker_compose_file_mode }}"
+
+- name: Create directory monitoring for prometheus
+  ansible.builtin.file:
+    path: "{{ prometheus_dest }}"
+    state: directory
+    owner: "{{ monitoring_owner }}"
+    group: "{{ monitoring_group }}"
+    mode: "{{ prometheus_file_mode }}"
+
+- name: Copy docker-compose file to the server
+  ansible.builtin.copy:
+    src: "{{ docker_compose_file }}"
+    dest: "{{ docker_compose_dest }}/{{ docker_compose_file }}"
+    owner: "{{ monitoring_owner }}"
+    group: "{{ monitoring_group }}"
+    mode: "{{ docker_compose_file_mode }}"
+
+- name: Copy prometheus yaml
+  ansible.builtin.copy:
+    src: "{{ prometheus_file }}"
+    dest: "{{ prometheus_dest }}/{{ prometheus_file }}"
+    owner: "{{ monitoring_owner }}"
+    group: "{{ monitoring_group }}"
+    mode: "{{ prometheus_file_mode }}"
+
+- name: Install Docker Compose plugin (Ubuntu)
+  ansible.builtin.apt:
+    name: docker-compose-plugin
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install Docker Compose (Debian)
+  ansible.builtin.get_url:
+    url: "https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64"
+    dest: "/usr/local/bin/docker-compose"
+    mode: '0755'
+  when: ansible_distribution == "Debian"
+
+- name: Start Docker Compose services
+  ansible.builtin.shell: "{{ docker_compose_command }}"
+  args:
+    chdir: "{{ docker_compose_dest }}"
+  become: yes
+  become_user: "{{ monitoring_owner }}"

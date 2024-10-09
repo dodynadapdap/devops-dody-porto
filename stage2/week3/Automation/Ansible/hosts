@@ -1,0 +1,13 @@
+[googlevm]
+appserver ansible_host=34.169.27.89
+gateway ansible_host=34.83.95.133
+
+[googlevm:vars]
+ansible_ssh_user=dody
+ansible_ssh_private_key_file=~/.ssh/privatkeys
+
+[server1]
+appserver
+
+[server2]
+gateway

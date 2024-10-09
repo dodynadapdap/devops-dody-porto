@@ -1,0 +1,5 @@
+docker_image: dody99/team2-literature-frontend:production
+docker_container_name: team2-literature-frontend
+docker_restart_policy: unless-stopped
+docker_ports:
+  - '3010:80'
