@@ -152,9 +152,12 @@ pertama buat domain
 ```
 sudo certbot --nginx -d <domaingrafana>
 ```
-
+![image](https://github.com/user-attachments/assets/59c63bbf-69ee-4fc8-a718-d773ca141cdf)
+![image](https://github.com/user-attachments/assets/3af81bd9-5675-4f47-90b9-4a924b3b07a6)
 ![image](https://github.com/user-attachments/assets/75510271-326a-4d33-8dd8-95f1fd76f33b)
-
 ![image](https://github.com/user-attachments/assets/5bcd9cb8-4837-4fd4-9523-04d35cc3fa61)
+![image](https://github.com/user-attachments/assets/603f72d8-b12a-491d-b5e6-15ee47a38622)
+![image](https://github.com/user-attachments/assets/b2ed1c0d-782c-46b0-a517-92605ee0b62f)
+![image](https://github.com/user-attachments/assets/f02911f0-3472-4380-8df5-5a5c4534fc08)
 
 
