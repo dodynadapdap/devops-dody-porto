@@ -152,6 +152,15 @@ pertama buat domain
 ```
 sudo certbot --nginx -d <domaingrafana>
 ```
+
+pormql query
+```
+# alert CPU > 25%
+100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 20
+
+#alert memory > 75%
+100 * (1 - ((node_memory_MemAvailable_bytes{} or node_memory_Buffers_bytes{} + node_memory_Cached_bytes{} + node_memory_MemFree_bytes{}) / node_memory_MemTotal_bytes{})) > 75 
+```
 ![image](https://github.com/user-attachments/assets/59c63bbf-69ee-4fc8-a718-d773ca141cdf)
 ![image](https://github.com/user-attachments/assets/3af81bd9-5675-4f47-90b9-4a924b3b07a6)
 ![image](https://github.com/user-attachments/assets/75510271-326a-4d33-8dd8-95f1fd76f33b)
