@@ -69,3 +69,30 @@ ansible all -m ping
 
 
 #### Membuat User baru
+
+![image](https://github.com/user-attachments/assets/4b6bf13e-7647-4b25-89c8-fdcf92697d59)
+
+#### Instalasi Docker
+
+![image](https://github.com/user-attachments/assets/c18dd58e-94c8-4ddf-a57c-367d3ef5ee45)
+
+![image](https://github.com/user-attachments/assets/57ddcb35-b16b-4b19-ad81-02ec8efcfb76)
+
+![image](https://github.com/user-attachments/assets/3830fc35-1e6a-4805-bf81-cd4f419c1da6)
+
+
+### Deployee aplikasi frontend
+
+![image](https://github.com/user-attachments/assets/26d623cb-f430-4786-acdd-c148161b5bab)
+
+### Instalasi Monitoring
+
+![image](https://github.com/user-attachments/assets/d29ca446-bd67-48b5-808c-d0003db4731d)
+![image](https://github.com/user-attachments/assets/0447ee45-672f-423b-9f99-134271e4fd80)
+![image](https://github.com/user-attachments/assets/d31ca110-da3a-45ea-8cba-f23d54474fd4)
+
+### Setup reverse-proxy
+
+![image](https://github.com/user-attachments/assets/692f1028-1e90-4ab6-9e62-dd613a1af634)
+
+
