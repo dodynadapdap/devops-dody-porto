@@ -44,7 +44,7 @@ https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 setelah terraform terrinstall kita bisa membuat directory structure supaya lebih rapih yang berisikan semua konfigurasi dari terraform kita.
 
-![image](https://github.com/user-attachments/assets/e07ad1d1-396b-42e9-998e-18d36582a6fc)
+![image](https://github.com/user-attachments/assets/90f4a2f4-ff38-4f4f-99c5-a22183940b64)
 
 ### Direktori struktur
 Agar semakin rapih jangan simpan semua konfigurasi terraform di main.tf file tapi lebih baik kita pisah pisah sesuai dengan fungsinnya.
