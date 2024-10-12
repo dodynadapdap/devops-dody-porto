@@ -3,8 +3,9 @@
   become: true
   roles:
     # - { role: apt_basic, tags: "apt_basic_semua" }
-    # - { role: users, tags: "user_create_semua" }
     # - { role: docker_install, tags: "docker_install_semua" }
-    
-    #  - { role: frontend_install, tags: "frontend_install_semua" }
-     - { role: monitoring_install, tags: "monitoring_install_semua" }
+    # - { role: users, tags: "user_create_semua" }
+    # - { role: frontend_install, tags: "frontend_install_semua" }
+    # - { role: monitoring_install, tags: "monitoring_install_semua" }
+    # - { role: reverse_proxy, tags: "reverse_proxy_semua" }
+    - { role: ssl, tags: "ssl_semua" }

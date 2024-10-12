@@ -1,0 +1,3 @@
+node_domain: exporter.dody.studentdumbways.my.id
+prometheus_domain: prom.dody.studentdumbways.my.id
+grafana_domain: monitoring.dody.studentdumbways.my.id

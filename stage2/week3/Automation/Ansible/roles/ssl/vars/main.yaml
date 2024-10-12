@@ -1,0 +1,4 @@
+dns_cloudflare_api_token: 9dfe726a4c481dcc129710570b2d819bbecc1
+node_domain: exporter.dody.studentdumbways.my.id
+prometheus_domain: prom.dody.studentdumbways.my.id
+grafana_domain: monitoring.dody.studentdumbways.my.id

@@ -1,6 +1,6 @@
 [googlevm]
-appserver ansible_host=34.169.27.89
-gateway ansible_host=34.83.95.133
+appserver ansible_host=34.105.84.158 
+gateway ansible_host=34.83.255.249
 
 [googlevm:vars]
 ansible_ssh_user=dody
