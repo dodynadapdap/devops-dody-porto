@@ -4,19 +4,19 @@
     state: stopped
 
 - name: Install software-properties-common
-  apt:
+  snap:
     name: software-properties-common
     state: present
   become: yes
 
 - name: Add Certbot repository
-  apt_repository:
+  snap_repository:
     repo: ppa:certbot/certbot
     state: present
   become: yes
 
 - name: Install Certbot and its Cloudflare plugin
-  apt:
+  snap:
     name:
       - certbot
       - python3-certbot-dns-cloudflare
