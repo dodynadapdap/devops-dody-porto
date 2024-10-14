@@ -11,6 +11,10 @@ Untuk reverse proxy bisa menyesuaikan. Diperbolehkan menggunakan ssl dari cloudf
 
 2. kemudian kita melakukan join master terhadap para server worker kita dengan menggunakan command ini pada server master
 ```
+# mengambil token dari server master
+docker swarm init --advertise-addr <ip publik master>
+
+# join ke server worker
 docker swarm join-token worker
 ```
 paste token ke masing-masing server worker kita
@@ -19,7 +23,7 @@ paste token ke masing-masing server worker kita
 ```
 docker node ls
 ```
-![image](https://github.com/user-attachments/assets/70605a80-d565-481f-93c9-a699eb15f164)
+![image](https://github.com/user-attachments/assets/fe232ec4-316b-4935-ab7b-d513c536e544)
 
 
 ### Deploy frontend
