@@ -71,20 +71,35 @@ docker ps
 # masuk ke databse
 docker exec -it $(docker ps -q -f name=mysql_database) bash
 ```
-![image](https://github.com/user-attachments/assets/41089384-fe8d-4a9c-999d-632f00a4a6db)
+
+![image](https://github.com/user-attachments/assets/12f6fdb6-1c7f-4847-b81b-9fe1d460c961)
 
 
 ### Be
 
 masuk ke direktori be dan create file compose.yaml
+```
+services:
+  backend:
+    image: dody99/team2-literature-beckend:production
+    depends_on:
+      - mysql
+    networks:
+      - app_network
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
 
-![image](https://github.com/user-attachments/assets/8407c21a-92f3-4d5e-b9e7-8e27926e5500)
+networks:
+  app_network:
+```
+![image](https://github.com/user-attachments/assets/08cb3547-1c22-47c7-8ba7-8ac01f3c22d4)
 
-![image](https://github.com/user-attachments/assets/c31e4d08-0c3a-4e56-bda4-9806cb8f95b2)
+![image](https://github.com/user-attachments/assets/1d493b52-3be2-45de-b121-7440ef8d13e0)
 
-![image](https://github.com/user-attachments/assets/4a95f032-5bf4-46ee-aee7-09114889995a)
-
-![image](https://github.com/user-attachments/assets/801ef24b-110c-41bb-be9b-0f09388c9f15)
 
 
 # frontend
