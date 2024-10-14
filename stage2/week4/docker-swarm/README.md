@@ -26,7 +26,7 @@ docker node ls
 ![image](https://github.com/user-attachments/assets/fe232ec4-316b-4935-ab7b-d513c536e544)
 
 
-### Deploy frontend
+### Deploy db
 buat lah beberapa direktori untuk frontend beckend database dan webser
 
 ![image](https://github.com/user-attachments/assets/82dfd760-a051-48b1-9eea-2644cd8f3efb)
@@ -34,11 +34,32 @@ buat lah beberapa direktori untuk frontend beckend database dan webser
 1. setup database
 
 masuk ke direktori db dan create file compose.yaml
-
-![image](https://github.com/user-attachments/assets/f1e63549-10a2-4dec-b317-4fadfb661c54)
-
-![image](https://github.com/user-attachments/assets/7b16fb86-0954-46b7-a90d-29d6b479eab8)
-
+```
+services:
+  mysql:
+    image: mysql:latest
+    networks:
+      - app_network
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: nadapdap123!
+      MYSQL_DATABASE: dody
+      MYSQL_USER: dody
+      MYSQL_PASSWORD: nadapdap123!
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        delay: 10s
+    ports:
+      - "3306:3306"
+networks:
+  app_network: 
+    driver: overlay
+```
 ketikkan comman ini untuk mengecek apakah container database kita sudah berhasil
 ```
 docker service ls
@@ -50,7 +71,7 @@ docker ps
 # masuk ke databse
 docker exec -it $(docker ps -q -f name=mysql_database) bash
 ```
-![image](https://github.com/user-attachments/assets/484c94b7-ec4f-4a77-94af-13928e574c5f)
+![image](https://github.com/user-attachments/assets/41089384-fe8d-4a9c-999d-632f00a4a6db)
 
 
 ### Be
